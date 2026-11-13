@@ -1,0 +1,55 @@
+{
+  "id": "influxdb",
+  "name": "InfluxDB",
+  "kind": "driver",
+  "engine": "influxdb",
+  "paradigms": [
+    "time-series"
+  ],
+  "version": "0.1.0",
+  "description": "Initial scaffold for a read-only InfluxDB 3 Core driver. Database connectivity is not implemented yet.",
+  "license": "Apache-2.0",
+  "readme": "README.md",
+  "color": "#22ADF6",
+  "icon": "https://raw.githubusercontent.com/TabularisDB/tabularis-influxdb-plugin/main/assets/icon.svg",
+  "default_port": 8181,
+  "default_username": "",
+  "executable": "influxdb-plugin",
+  "connection_fields": {
+    "username": {
+      "hidden": true
+    },
+    "password": {
+      "label": "API token",
+      "placeholder": "InfluxDB token (not implemented yet)"
+    },
+    "host": {
+      "placeholder": "localhost"
+    },
+    "database": {
+      "placeholder": "metrics"
+    }
+  },
+  "capabilities": {
+    "schemas": false,
+    "views": false,
+    "routines": false,
+    "triggers": false,
+    "file_based": false,
+    "folder_based": false,
+    "connection_string": false,
+    "identifier_quote": "\"",
+    "sql_dialect": "generic",
+    "alter_primary_key": false,
+    "alter_column": false,
+    "create_foreign_keys": false,
+    "manage_tables": false,
+    "readonly": true,
+    "read_only_queries": false,
+    "table_export": false,
+    "table_import": false,
+    "supports_ssl": false,
+    "no_connection_required": false
+  },
+  "data_types": []
+}

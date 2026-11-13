@@ -1,0 +1,17 @@
+[package]
+name = "influxdb-plugin"
+version = "0.1.0"
+edition = "2021"
+description = "Tabularis driver plugin for InfluxDB (initial scaffold)"
+license = "Apache-2.0"
+publish = false
+repository = "https://github.com/TabularisDB/tabularis-influxdb-plugin"
+default-run = "influxdb-plugin"
+
+[dependencies]
+serde_json = { version = "1", features = ["arbitrary_precision"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
